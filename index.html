@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class 01</title>
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-        }
-        ul{
-            margin: 0;
-            padding: 0;
-        }
+    <title>CSS flex box</title>
 
+   <!--Google font linking-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
 
-        ul{
-            list-style: circle;
-        }
-    </style>
-    
+    <!-- css file linking -->
+    <link rel="stylesheet" href="css/style.css">
+ 
+
 </head>
-<body>
-    <h1 style="color: red;">Welcome to my website</h1>
-    <h2 style="color: blue;">This is a headline 1</h2>
-    <h3>This is a headline 2</h3>
-    <h4>This is a headline 3</h4>
-    <h5>This is a headline 4</h5>
-    <h6>This is a headline 5</h6>
-    
-    <p>This paragraph contains a lot of lines in the source code,<br>but the browser ignores it.</p>
-    <img src="data:image/jpeg;base64,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" alt="cute cat" width="200" height="auto"
-    
 
-    <a href="https://www.w3schools.com/">w3schools</a>
-    <!-- order list -->
-    <!-- unorder list -->
-    <ol>
-        <li>......</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>bootstrap</li>
-    </ol>
-    <ul>
-        <li>,,,,,</li>
-        <li>List</li>
-        <li>HTML</li>
-    </ul>
-    
+<body>
+    <header>
+        <div class="container">
+            <div class="menu-box">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt="ss logo"></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>Home</li>
+                        <li>Courses</li>
+                        <li>About Us</li>
+                        <li>SS Junior</li>
+                        <li>Events</li>
+                        <li>Comunity</li>
+                        <li>LIVE</li>
+                    </ul>
+                </div>
+                <div class="btns">
+                    <button>Signin</button>
+                    <button>Signup</button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
 </body>
+
 </html>
